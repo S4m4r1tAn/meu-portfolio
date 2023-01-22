@@ -1,0 +1,17 @@
+.transition-transform {
+    transition: 500ms all;
+}
+
+.transition-transform:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+    .transition-transform {
+        transition: none;
+    }
+    
+    .transition-transform:hover {
+        transform: scale(1);
+    }
+}

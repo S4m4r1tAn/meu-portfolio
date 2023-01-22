@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <!-- BASE -->
+    <link rel="stylesheet" href="./assets/css/base/global.css" />
+    <!-- COMPONENTES -->
+    <link rel="stylesheet" href="./assets/css/module/fontes.css" />
+    <link rel="stylesheet" href="./assets/css/module/grid.css" />
+    <link rel="stylesheet" href="./assets/css/module/transition.css" />
+    <!-- LAYOUT -->
+    <link rel="stylesheet" href="./assets/css/layout/header/header.css" />
+    <link rel="stylesheet" href="./assets/css/layout/header/profile-info.css" />
+    <link rel="stylesheet" href="./assets/css/layout/header/datas.css" />
+    <link rel="stylesheet" href="./assets/css/layout/header/info-plus.css" />
+    <link rel="stylesheet" href="./assets/css/layout/main/main.css" />
+    <link rel="stylesheet" href="./assets/css/layout/main/navigation.css" />
+    <link rel="stylesheet" href="./assets/css/layout/main/skills.css" />
+    <link rel="stylesheet" href="./assets/css/layout/footer.css" />
+    <!-- External -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <script src="https://unpkg.com/phosphor-icons" defer></script>
+
+    <style>
+        .navigation ul li:nth-child(1) {
+            background-color: transparent;
+        }
+
+        .navigation ul li:nth-child(2) {
+            background-color: var(--color-01);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+
+        <header>
+            <section class="profile-info">
+                <img src="./assets/images/foto-eric-oliveira.jpg" alt="Foto de um garoto pardo, de cabelo preto cacheado crespo. No cénario ele está encostado em uma parede colorida com detalhes de flores." />
+                <div class="profile-info-text">
+                    <h1 class="profile-name fonte-nome">Eric Oliveira</h1>
+                    <h3 class="profile-office fonte-regular">Desenvolvedor Front-end</h3>
+                    <ul class="profile-social">
+                        <li class="profile-social-item">
+                            <a href="https://github.com/Ericodesenvolvedor" target="_blank" title="Github">
+                                <i class="ph-github-logo-fill"></i>
+                            </a>
+                        </li>
+                        <li class="profile-social-item">
+                            <a href="https://www.linkedin.com/in/eric-de-oliveira-pereira-a925781b5/" target="_blank" title="Linkedin">
+                                <i class="ph-linkedin-logo-fill"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="datas">
+                <ul class="datas-items">
+                    <li class="data-item">
+                        <span class="fonte-digit">+6</span>
+                        <p class="fonte-regular">Meses de estudos</p>
+                    </li>
+
+                    <li class="data-item">
+                        <span class="fonte-digit skills-counter">+3</span>
+                        <p class="fonte-regular">Skills</p>
+                    </li>
+
+                    <li class="data-item">
+                        <span class="fonte-digit">2</span>
+                        <p class="fonte-regular">Projetos colaborados</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="info-plus">
+                <a href="#" class="fonte-regular link-cv" title="Baixa curriculo, indiponivel no momento.">
+                    Download CV
+                    <i class="ph-download-simple"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/eric-de-oliveira-pereira-a925781b5/" target="_blank" class="fonte-regular link-contact" title="Conversar comigo pelo linkedin">Fale comigo</a>
+            </section>
+        </header>
+
+        <main>
+            <nav class="navigation">
+                <ul class="navigation-items">
+                    <li>
+                        <a href="./index.html" class="fonte-regular" title="Ver projetos">Portfolio</a>
+                    </li>
+                    
+                    <li>
+                        <a href="./skills.html" class="fonte-regular" title="Ver skills">Skills</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <section class="skills">
+                <ul class="skills-items grid">
+                    <li class="skill-item transition-transform">
+                        <div class="skill-header">
+                            <i class="devicon-html5-plain"></i>
+                        </div>
+
+                        <div class="skill-body">
+                            <h3 class="fonte-projeto">Html</h3>
+                            <p class="fonte-projeto-descricao">Tenho uma boa noção de html e sempre estou buscando aprimorar a estrutura do layout e sua acessibilidade.</p>
+                        </div>
+                    </li>
+
+                    <li class="skill-item transition-transform">
+                        <div class="skill-header">
+                            <i class="devicon-css3-plain"></i>
+                        </div>
+
+                        <div class="skill-body">
+                            <h3 class="fonte-projeto">Css</h3>
+                            <p class="fonte-projeto-descricao">Tenho uma boa base sobre css e estou aprimorando essa hard skill, no momento aprendendo mais sobre melhores práticas para responsivo.</p>
+                        </div>
+                    </li>
+                    
+                    <li class="skill-item transition-transform">
+                        <div class="skill-header">
+                            <i class="devicon-javascript-plain"></i>
+                        </div>
+
+                        <div class="skill-body">
+                            <h3 class="fonte-projeto">Javascript</h3>
+                            <p class="fonte-projeto-descricao">Tenho uma base sólida no Javascript, no momento estou focado em apenas projetos com html e css, mas logo mais farei algo mais interativo.</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p class="fonte-projeto-descricao">Desenvolvido com 
+                <i class="ph-heart-fill"></i>
+                <a href="https://github.com/Ericodesenvolvedor" target="_blank" title="Ir para o github Eric o desenvolvedor">Ericodesenvolvedor</a>
+            </p>
+        </footer>
+    </div>
+    <script type="module" src="./assets/js/main.js"></script>
+</body>
+
+</html>
