@@ -7,9 +7,9 @@ export const DataCounter = (isProjects) => {
 }
 
 const countedProjects = () => {
-    const getLengthProjects = document.querySelector(".projects-items").childElementCount;
-    const getNumberOfProjects = document.querySelector('[data-datas="length"]')
-    getNumberOfProjects.innerText = getLengthProjects;
+    const getLength = document.querySelector(".projects-items").childElementCount;
+    const getNumberOfProjects = document.querySelector('.projects-counter');
+    getNumberOfProjects.innerText = getLength;
 }
 
 const countedSkills = () => {

@@ -6,20 +6,19 @@
 }
 
 .skill-item .skill-header {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 4.8rem;
+    width: 8rem;
+    height: 8rem;
+    margin: 0 auto 4.8rem;
 }
 
-.skill-item .skill-header i {
-    text-align: center;
-    font-size: 8rem;
-    color: var(--text-color-02);
+.skill-item .skill-header img {
+    display: block;
+    max-width: 100%;
 }
 
 @media screen and (max-width: 768px) {
-    .skill-item .skill-header i {
-        font-size: 6rem;
+    .skill-item .skill-header {
+        width: 6rem;
+        height: 6rem;
     }
 }

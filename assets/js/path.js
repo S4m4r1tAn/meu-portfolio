@@ -1,17 +1,18 @@
-import { DataCounter } from "./datacounter.js";
-import { ShowProjectsInHome } from "./showprojectsinhome.js";
+import { DataCounter } from "./show/datacounter.js";
+import { ShowProjects } from "./show/projects.js";
+import { ShowSkills } from "./show/skills.js";
 
 export default function Path() {
-    function containsClassProjects() {
+    function decidePath() {
         const element = document.querySelector(".projects");
         return element ? true : false;
     }
 
-    if(containsClassProjects()) {
-        ShowProjectsInHome();
+    if (decidePath()) {
+        ShowProjects();
     } else {
-        console.log("Nada por aqui")
+        ShowSkills();
     }
 
-    DataCounter(containsClassProjects());
+    DataCounter(decidePath());
 }
