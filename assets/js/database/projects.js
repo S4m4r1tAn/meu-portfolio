@@ -8,7 +8,6 @@ export const projects = [
             github: "https://github.com/Ericodesenvolvedor/current-time",
             website: "https://ericodesenvolvedor.github.io/current-time/",
         },
-        isResponsive: (resposive = true) => resposive ? "Responsivo" : "Não responsivo" 
     },
     
     {
@@ -20,7 +19,6 @@ export const projects = [
             github: "https://github.com/Ericodesenvolvedor/to-do-list-with-tailwind",
             website: "https://ericodesenvolvedor.github.io/to-do-list-with-tailwind/",
         },
-        isResponsive: (resposive = true) => resposive ? "Responsivo" : "Não responsivo" 
     },
  
     {
@@ -32,7 +30,6 @@ export const projects = [
             github: "https://github.com/Ericodesenvolvedor/formulario-de-login",
             website: "https://ericodesenvolvedor.github.io/formulario-de-login/",
         },
-        isResponsive: (resposive = true) => resposive ? "Responsivo" : "Não responsivo" 
     },
  
     {
@@ -44,7 +41,6 @@ export const projects = [
             github: "https://github.com/Ericodesenvolvedor/presentes-de-natal",
             website: "https://ericodesenvolvedor.github.io/presentes-de-natal/",
         },
-        isResponsive: (resposive = true) => resposive ? "Responsivo" : "Não responsivo" 
     },
  
     {
@@ -56,7 +52,6 @@ export const projects = [
             github: "https://github.com/Ericodesenvolvedor/jordan-shoes",
             website: "https://ericodesenvolvedor.github.io/jordan-shoes/",
         },
-        isResponsive: (resposive = true) => resposive ? "Responsivo" : "Não responsivo" 
     },
  
     {
@@ -68,7 +63,6 @@ export const projects = [
             github: "https://github.com/Ericodesenvolvedor/blog-desafio-codelandia",
             website: "https://ericodesenvolvedor.github.io/blog-desafio-codelandia/",
         },
-        isResponsive: (resposive = true) => resposive ? "Responsivo" : "Não responsivo" 
     },
  
     {
@@ -80,7 +74,6 @@ export const projects = [
             github: "https://github.com/Ericodesenvolvedor/social-links",
             website: "https://ericodesenvolvedor.github.io/social-links/",
         },
-        isResponsive: (resposive = true) => resposive ? "Responsivo" : "Não responsivo" 
     },
  
     {
@@ -92,7 +85,6 @@ export const projects = [
             github: "https://github.com/Ericodesenvolvedor/cards-responsivos",
             website: "https://ericodesenvolvedor.github.io/cards-responsivos/",
         },
-        isResponsive: (resposive = true) => resposive ? "Responsivo" : "Não responsivo" 
     },
  
     {
@@ -104,7 +96,6 @@ export const projects = [
             github: "https://github.com/Ericodesenvolvedor/space-cream",
             website: "https://ericodesenvolvedor.github.io/space-cream/",
         },
-        isResponsive: (resposive = true) => resposive ? "Responsivo" : "Não responsivo" 
     },
  
     {
@@ -116,6 +107,5 @@ export const projects = [
             github: "https://github.com/Ericodesenvolvedor/treine-me",
             website: "https://ericodesenvolvedor.github.io/treine-me/",
         },
-        isResponsive: (resposive = false) => resposive ? "Responsivo" : "Não responsivo" 
     },
 ]
