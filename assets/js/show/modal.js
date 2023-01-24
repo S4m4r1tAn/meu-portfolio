@@ -1,22 +1,30 @@
 export function modal(projects, li) {
     const modalContainer = document.querySelector(".modal-area");
-    const modal = modalContainer.querySelector(".modal");
+    const modalContent = modalContainer.querySelector(".modal");
     
-    modalContainer.classList.add("active");
     
-    function content() {
-        const title = li.querySelector(".title").innerText;
-        const data = datas(title);
-        showContent(...data);
+    function start() {
+        modalContainer.classList.add("active");
+        const data = search();
+        createStructure(...data);
+
+        modalContent.addEventListener("click", (event) => {
+            const {target} = event;
+    
+            if(target.className === 'modal-close') {
+                closeModal();
+            }
+        })
     }
     
-    function datas(titleSearch) {
+    function search() {
+        const title = li.querySelector(".title").innerText;
         const infos = projects.filter(data => {
-            if(titleSearch === data.title) {
-                const { title, description, image, tags, links, isResponsive } = data;
+            if(title === data.title) {
+                const { title, description, image, tags, links } = data;
     
                 return {
-                    title, description, image, tags, isResponsive, links,
+                    title, description, image, tags, links,
                 }
             }
         })
@@ -24,9 +32,8 @@ export function modal(projects, li) {
         return infos;
     } 
     
-    function showContent({ title, description, image, tags, isResponsive, links }) {
-        const {github, website} = links;
-        const inner = `
+    function createStructure({ title, description, image, tags, links }) {
+        const content = `
         <div class="modal-banner">
             <img src=${image} alt="#">
             <button class="modal-close">x</button>
@@ -40,40 +47,42 @@ export function modal(projects, li) {
             <p class="modal-description">${description}</p>
         
             <ul class="modal-links">
-            <li class="modal-link-item">
-            <a href=${github} class="modal-link">Github</a>
+                <li class="modal-link-item">
+                    <a href=${links.github} class="modal-link" target="_blank">Github</a>
                 </li>
                 
                 <li class="modal-link-item">
-                <a href=${website} class="modal-link">Website</a>
+                    <a href=${links.website} class="modal-link" target="_blank">Website</a>
                 </li>
-                </ul>
-                </div>
-                `
-                
-        modal.innerHTML = inner;
+            </ul>
+        </div>
+        `
+
+        show(content, tags)
+    }
+            
+    function show(content, tags) {
+        modalContent.innerHTML = content;
         createSpan(tags);
     }
     
     function createSpan(tags) {
+        const fragment = new DocumentFragment();
         const tagsContainer = document.querySelector(".modal-tags");
-
-        tags.forEach(tags => {
-            tagsContainer.innerHTML += `<span class="modal-tag-item">${tags}</span>`
+        
+        tags.forEach(tag => {
+            const span = document.createElement("span");
+            span.setAttribute("class", "modal-tag-item");
+            span.innerText = tag;
+            fragment.appendChild(span);
         })
+
+        tagsContainer.appendChild(fragment);
     }
 
     function closeModal() {
         modalContainer.classList.remove("active");
     }
 
-    modal.addEventListener("click", (event) => {
-        const {target} = event;
-
-        if(target.className === 'modal-close') {
-            closeModal();
-        }
-    })
-
-    content();
+    start();
 }
