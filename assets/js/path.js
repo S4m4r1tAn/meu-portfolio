@@ -1,5 +1,5 @@
 import { DataCounter } from "./show/datacounter.js";
-import { ShowProjects } from "./show/projects.js";
+import { Projects } from "./show/projects.js";
 import { ShowSkills } from "./show/skills.js";
 
 export default function Path() {
@@ -9,7 +9,7 @@ export default function Path() {
     }
 
     if (decidePath()) {
-        ShowProjects();
+        Projects();
     } else {
         ShowSkills();
     }

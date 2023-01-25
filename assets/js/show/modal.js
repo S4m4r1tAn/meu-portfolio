@@ -2,7 +2,6 @@ export function modal(projects, li) {
     const modalContainer = document.querySelector(".modal-area");
     const modalContent = modalContainer.querySelector(".modal");
     
-    
     function start() {
         modalContainer.classList.add("active");
         const data = search();

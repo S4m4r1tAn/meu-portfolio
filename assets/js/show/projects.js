@@ -1,13 +1,19 @@
 import { projects } from "../database/projects.js";
 import { modal } from "./modal.js";
 
-export function ShowProjects() {
+export function Projects() {
     const projectsContainer = document.querySelector(".projects-items");
     
-    projects.forEach(datas => {
+    function getAll() {
+        projects.forEach(datas => {
+            show(datas);
+        });
+    }
+
+    function structure(datas) {
         const { title, description, image, links } = datas;
         const { github, website } = links;
-
+    
         const li = `
             <li class="project-item transition-transform">
                 <div class="project-header">
@@ -31,15 +37,24 @@ export function ShowProjects() {
                 </div>
             </li>
         `
-        projectsContainer.innerHTML += li;
-    });
 
-    projectsContainer.addEventListener("click", (event) => {
+        return li;
+    }
+
+    function show(datas) {
+        projectsContainer.innerHTML += structure(datas);
+    }
+
+    function isModalButton() {
+        projectsContainer.addEventListener("click", (event) => {
         const {target} = event;
 
         if(target.localName === 'button') {
             const li = target.parentNode.parentNode;
             modal(projects, li);
         }
-    })
+    })}
+
+    getAll();
+    isModalButton();
 }

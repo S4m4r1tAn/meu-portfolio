@@ -2,9 +2,16 @@ import { skills } from "../database/skiils.js";
 
 export function ShowSkills() {
     const skillsContainer = document.querySelector(".skills-items");
-    skills.forEach(datas => {
-        const { title, description, image } = datas;
 
+    function getAll() {
+        skills.forEach(datas => {
+            show(datas);
+        })
+    }
+
+    function structure(datas) {
+        const { title, description, image } = datas;
+    
         const li = `
         <li class="skill-item transition-transform">
             <div class="skill-header">
@@ -17,7 +24,12 @@ export function ShowSkills() {
             </div>
         </li>
         `
+        return li;
+    }
 
-        skillsContainer.innerHTML += li;
-    })
+    function show(datas) {
+        skillsContainer.innerHTML += structure(datas);
+    }
+
+    getAll();
 }
