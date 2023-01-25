@@ -3,7 +3,12 @@ import { modal } from "./modal.js";
 
 export function Projects() {
     const projectsContainer = document.querySelector(".projects-items");
-    
+
+    function start() {
+        getAll();
+        isModalButton();
+    }
+
     function getAll() {
         projects.forEach(datas => {
             show(datas);
@@ -55,6 +60,5 @@ export function Projects() {
         }
     })}
 
-    getAll();
-    isModalButton();
+    start();
 }

@@ -6,14 +6,7 @@ export function modal(projects, li) {
         modalContainer.classList.add("active");
         const data = search();
         createStructure(...data);
-
-        modalContent.addEventListener("click", (event) => {
-            const {target} = event;
-    
-            if(target.className === 'modal-close') {
-                closeModal();
-            }
-        })
+        isCloseModal();
     }
     
     function search() {
@@ -77,6 +70,16 @@ export function modal(projects, li) {
         })
 
         tagsContainer.appendChild(fragment);
+    }
+
+    function isCloseModal() {
+        modalContent.addEventListener("click", (event) => {
+            const {target} = event;
+    
+            if(target.className === 'modal-close') {
+                closeModal();
+            }
+        })
     }
 
     function closeModal() {

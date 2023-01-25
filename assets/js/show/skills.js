@@ -3,6 +3,10 @@ import { skills } from "../database/skiils.js";
 export function ShowSkills() {
     const skillsContainer = document.querySelector(".skills-items");
 
+    function start() {
+        getAll();
+    }
+
     function getAll() {
         skills.forEach(datas => {
             show(datas);
@@ -31,5 +35,5 @@ export function ShowSkills() {
         skillsContainer.innerHTML += structure(datas);
     }
 
-    getAll();
+    start();
 }
