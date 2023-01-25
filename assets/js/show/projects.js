@@ -16,7 +16,7 @@ export function ShowProjects() {
                 </div>
             
                 <div class="project-body">
-                    <h3 class="fonte-projeto title">${title}</h3>
+                    <h2 class="fonte-projeto title">${title}</h2>
                     <p class="fonte-projeto-descricao">${description}</p>
                 
                     <div class="project-resume-ancoras">

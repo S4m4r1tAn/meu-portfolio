@@ -12,7 +12,7 @@ export function ShowSkills() {
             </div>
 
             <div class="skill-body">
-                <h3 class="fonte-projeto">${title}</h3>
+                <h2 class="fonte-projeto">${title}</h2>
                 <p class="fonte-projeto-descricao">${description}</p>
             </div>
         </li>
