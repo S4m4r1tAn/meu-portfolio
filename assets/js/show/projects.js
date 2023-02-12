@@ -27,9 +27,10 @@ export function Projects() {
                 </div>
             
                 <div class="project-body">
-                    <h2 class="fonte-projeto title">${title}</h2>
-                    <p class="fonte-projeto-descricao">${description}</p>
-                
+                    <div class="project-wrapper-text">
+                        <h2 class="fonte-projeto title">${title}</h2>
+                        <p class="fonte-projeto-descricao">${description}</p>
+                    </div>
                     <div class="project-resume-ancoras">
                         <a href=${website} target="_blank" title="Ver site">
                             <i class="ph-globe"></i>

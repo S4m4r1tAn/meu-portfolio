@@ -2,6 +2,9 @@
     width: 100%;
     background-color: var(--color-02);
     border-radius: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .project-header {
@@ -28,7 +31,10 @@
 }
 
 .project-item .project-body {
-    padding: 1.8rem 2.4rem
+    flex: 1;
+    padding: 1.8rem 2.4rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-body h2 {
@@ -40,6 +46,7 @@
 }
 
 .project-resume-ancoras {
+    flex: 1;
     display: flex;
     gap: 3.8rem;
     align-items: center;
@@ -47,6 +54,7 @@
 }
 
 .project-resume-ancoras a {
+    align-self: flex-end;
     display: flex;
     align-items: center;
     justify-content: center;
