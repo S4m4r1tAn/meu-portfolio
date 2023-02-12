@@ -1,5 +1,16 @@
 export const projects = [
     {
+        title: "Efront Desafio",
+        description: "Esse projeto foi criado para fins de estudo do e-book Efront do iuricode, o desafio era recriar um layout dado no figma para simular uma newsletter.",
+        image: "https://github.com/Ericodesenvolvedor/eFront-desafio/raw/master/.github/preview-eFront-desafio.jpg",
+        tags: ["html", "css", "javascript"],
+        links: {
+            github: "https://github.com/Ericodesenvolvedor/eFront-desafio",
+            website: "https://ericodesenvolvedor.github.io/eFront-desafio/",
+        },
+    },
+
+    {
         title: "Hora atual",
         description: "Um relógio digital criado com tailwindcss e javascript com foco em aprender coisas novas.",
         image: "https://github.com/Ericodesenvolvedor/current-time/raw/master/.github/preview-current-time.jpg",
