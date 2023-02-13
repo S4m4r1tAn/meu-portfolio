@@ -28,7 +28,7 @@ export function Projects() {
             
                 <div class="project-body">
                     <div class="project-wrapper-text">
-                        <h2 class="fonte-projeto title">${title}</h2>
+                        <h2 class="fonte-projeto title" id="project-title">${title}</h2>
                         <p class="fonte-projeto-descricao">${description}</p>
                     </div>
                     <div class="project-resume-ancoras">
