@@ -1,12 +1,25 @@
 export function modal(projects, li) {
     const modalContainer = document.querySelector(".modal-area");
     const modalContent = modalContainer.querySelector(".modal");
-    
+    const page = document.querySelector(".page");
+    const pageChildren = Array.from(page.children); 
+    let previousActiveElement;
+
     function start() {
-        modalContainer.classList.add("active");
         const data = search();
         createStructure(...data);
+        focusInModal();
+        previousActiveElement = document.activeElement;
+        modalContainer.classList.add("active");
         isCloseModal();
+    }
+
+    function focusInModal() {
+        pageChildren.forEach(children => {
+            if(children !== modalContainer) {
+                children.inert = true;
+            }
+        })
     }
     
     function search() {
@@ -84,6 +97,8 @@ export function modal(projects, li) {
 
     function closeModal() {
         modalContainer.classList.remove("active");
+        pageChildren.forEach(children => children.removeAttribute("inert"));
+        previousActiveElement.focus();
     }
 
     start();
