@@ -1,5 +1,16 @@
 export const projects = [
     {
+        title: "Novo Social Links",
+        description: "Um projeto criado para apresentar alguns links interessantes para vocês.",
+        image: "https://github.com/Ericodesenvolvedor/novo-social-links/raw/master/.github/preview-novo-social-links.jpg",
+        tags: ["html", "css", "javascript", "dark-theme"],
+        links: {
+            github: "https://github.com/Ericodesenvolvedor/novo-social-links",
+            website: "https://ericodesenvolvedor.github.io/novo-social-links/",
+        },
+    },
+
+    {
         title: "Efront Desafio",
         description: "Esse projeto foi criado para fins de estudo do e-book Efront do iuricode, o desafio era recriar um layout dado no figma para simular uma newsletter.",
         image: "https://github.com/Ericodesenvolvedor/eFront-desafio/raw/master/.github/preview-eFront-desafio.jpg",
