@@ -1,5 +1,16 @@
 export const projects = [
     {
+        title: "Nature Water",
+        description: "Esse projeto foi criado na intenção de melhorar minhas habilidades na criação de landing pages responsivas.",
+        image: "https://github.com/Ericodesenvolvedor/nature-water/raw/master/.github/preview-nature-water.jpg",
+        tags: ["html", "css", "figma"],
+        links: {
+            github: "https://github.com/Ericodesenvolvedor/nature-water",
+            website: "https://ericodesenvolvedor.github.io/nature-water/",
+        },
+    },
+
+    {
         title: "Novo Social Links",
         description: "Um projeto criado para apresentar alguns links interessantes para vocês.",
         image: "https://github.com/Ericodesenvolvedor/novo-social-links/raw/master/.github/preview-novo-social-links.jpg",
